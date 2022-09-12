@@ -9,24 +9,18 @@
 </head>
 
 <body>
+
+    <form action="site.php" method="get">
+        Name: <input type="text" name="username" id="">
+        <input type="submit">
+    </form>
+
+    <br>
     <?php
-
-    $num = 12;
-
-    $num--;
-
-    echo $num;
-
-    $num = $num * -1;
-
-    echo ($num);
-
-    echo sqrt(max(2, 34, 225, 74, 34, 56, 3, -3, 2, 66));
-
-    echo floor(234.343);
-
-    echo ceil(23.434);
-
+    if (isset($_GET['username'])) {
+        $username = $_GET['username'];
+        echo "Your name is: $username";
+    }
     ?>
 </body>
 
