@@ -9,21 +9,14 @@
 </head>
 
 <body>
-
-    <form action="site.php" method="post">
-        Password: <input type="password" name="password"><br>
-
-        <input type="submit">
-    </form>
-
-    <br>
     <?php
+    $friends = array("Kevin", "karen", "Moussa", "Jim");
 
-    if (isset($_POST['password'])) {
-        $password = $_POST['password'];
-        echo $password;
-    }
+    $friends[1] = "Ivon";
 
+    echo $friends[1];
+
+    echo "<br>" . count($friends) . " friends";
     ?>
 
 </body>
