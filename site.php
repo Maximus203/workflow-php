@@ -23,25 +23,14 @@
     <?php
     if (isset($_GET['username'])) {
         $username = $_GET['username'];
-        echo "Your name is: $username";
+        echo "Your name is: $username <br>";
     }
-
     if (isset($_GET['age'])) {
         $age = $_GET['age'];
         echo "Your age is: $age";
     }
     ?>
 
-    <script>
-    function valider() {
-        if (document.getElementById('name').length == 0) {
-            alert('You must fill the name field !');
-        }
-        if (document.getElementById('age').length == 0) {
-            alert('You must fill the age field !');
-        }
-    }
-    </script>
 </body>
 
 </html>
