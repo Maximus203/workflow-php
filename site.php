@@ -10,31 +10,12 @@
 
 <body>
     <?php
-    $characterName = "Cherif DIOUF";
-    $characterAge = 23;
 
-    echo "<h1>Site de Thera</h1>";
-    echo "<hr>";
+    $num = 12;
 
+    $num--;
 
-    echo "<p>This is my website</p>";
-    echo "<p>My name is: <b> $characterName </b></p>";
-
-    $phrase = "Code is the process to create bugs";
-    $after = strtolower($phrase);
-
-    echo "<p>The sentences :$phrase give in lower case: $after</p>";
-
-    $after = strtoupper($phrase);
-    echo "<p>And in uppercase: $after</p>";
-
-    echo strlen($phrase);
-
-    echo "<br>";
-
-    str_replace("process", "processus", $phrase);
-
-    echo substr($phrase, 5, 25);
+    echo $num;
 
     ?>
 </body>
