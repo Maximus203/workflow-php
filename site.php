@@ -10,14 +10,12 @@
 
 <body>
     <?php
-    function sayHi($name, $age)
+    function cube($num)
     {
-        echo "Hello $name, you are $age <br>";
+        return $num ^ 3;
     }
 
-    sayHi("Mike", 15);
-    sayHi("Moussa", 25);
-    sayHi("Issa", 23);
+    echo cube(2);
 
     ?>
 </body>
