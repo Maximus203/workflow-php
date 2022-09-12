@@ -17,6 +17,15 @@
 
     echo $num;
 
+    $num = $num * -1;
+
+    echo ($num);
+
+    echo sqrt(max(2, 34, 225, 74, 34, 56, 3, -3, 2, 66));
+
+
+
+
     ?>
 </body>
 
