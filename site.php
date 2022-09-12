@@ -30,9 +30,11 @@
 
     echo strlen($phrase);
 
+    echo "<br>";
+
     str_replace("process", "processus", $phrase);
 
-    echo $phrase;
+    echo substr($phrase, 5, 25);
 
     ?>
 </body>
