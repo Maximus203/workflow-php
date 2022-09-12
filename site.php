@@ -12,7 +12,7 @@
     <?php
     function cube($num)
     {
-        return $num ^ 3;
+        return $num * $num * $num;
     }
 
     echo cube(2);
