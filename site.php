@@ -11,24 +11,27 @@
 <body>
 
     <form action="site.php" method="get">
-        Name: <input type="text" name="username" id="username"><br>
-        Age: <input type="text" name="age" id="age"><br>
-        <br>
+        Color: <input type="text" name="color"><br>
+        Plural noun: <input type="text" name="pluralNoun"><br>
+        Celebrity: <input type="text" name="celebrity"><br>
+
         <input type="submit" onsubmit="valider">
-
-
     </form>
 
     <br>
     <?php
-    if (isset($_GET['username'])) {
-        $username = $_GET['username'];
-        echo "Your name is: $username <br>";
+
+    if (isset($_GET['color']) && isset($_GET['pluralNoun']) && isset($_GET['celebrity'])) {
+
+        $color = $_GET['color'];
+        $pluralNoun = $_GET['pluralNoun'];
+        $celebrity = $_GET['celebrity'];
+
+        echo "Roses are $color <br>";
+        echo "$pluralNoun are blue <br>";
+        echo "I love $celebrity <br>";
     }
-    if (isset($_GET['age'])) {
-        $age = $_GET['age'];
-        echo "Your age is: $age";
-    }
+
     ?>
 
 </body>
