@@ -10,8 +10,15 @@
 
 <body>
     <?php
-    $grades = array("Jim" => "A+", "Pam" => "A+", "Oscar" => "B+", "Moussa" => "C+");
-    echo $grades["Jim"]
+    function sayHi($name, $age)
+    {
+        echo "Hello $name, you are $age <br>";
+    }
+
+    sayHi("Mike", 15);
+    sayHi("Moussa", 25);
+    sayHi("Issa", 23);
+
     ?>
 </body>
 
