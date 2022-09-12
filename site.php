@@ -30,7 +30,9 @@
 
     echo strlen($phrase);
 
+    str_replace("process", "processus", $phrase);
 
+    echo $phrase;
 
     ?>
 </body>
