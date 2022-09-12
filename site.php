@@ -9,14 +9,23 @@
 </head>
 
 <body>
+
+    <form action="site.php" method="post">
+        Apples: <input type="checkbox" name="fruits[]" value="apples"><br>
+        Oranges: <input type="checkbox" name="fruits[]" value="oranges"><br>
+        Pears: <input type="checkbox" name="fruits[]" value="pears"><br>
+
+        <input type="submit">
+    </form>
+
+
     <?php
-    $friends = array("Kevin", "karen", "Moussa", "Jim");
-
-    $friends[1] = "Ivon";
-
-    echo $friends[1];
-
-    echo "<br>" . count($friends) . " friends";
+    if (isset($_POST['fruits'])) {
+        $fruits = $_POST['fruits'];
+        echo $fruits[0];
+        echo $fruits[1];
+        echo $fruits[2];
+    }
     ?>
 
 </body>
