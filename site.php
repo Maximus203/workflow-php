@@ -20,8 +20,8 @@
     <?php
 
     if (isset($_POST['password'])) {
-        $color = $_POST['password'];
-        echo $color;
+        $password = $_POST['password'];
+        echo $password;
     }
 
     ?>
