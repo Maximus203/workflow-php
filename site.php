@@ -11,8 +11,12 @@
 <body>
 
     <form action="site.php" method="get">
-        Name: <input type="text" name="username" id="">
-        <input type="submit">
+        Name: <input type="text" name="username" id="username"><br>
+        Age: <input type="text" name="age" id="age"><br>
+        <br>
+        <input type="submit" onsubmit="valider">
+
+
     </form>
 
     <br>
@@ -21,7 +25,23 @@
         $username = $_GET['username'];
         echo "Your name is: $username";
     }
+
+    if (isset($_GET['age'])) {
+        $age = $_GET['age'];
+        echo "Your age is: $age";
+    }
     ?>
+
+    <script>
+    function valider() {
+        if (document.getElementById('name').length == 0) {
+            alert('You must fill the name field !');
+        }
+        if (document.getElementById('age').length == 0) {
+            alert('You must fill the age field !');
+        }
+    }
+    </script>
 </body>
 
 </html>
