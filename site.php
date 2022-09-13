@@ -9,13 +9,34 @@
 </head>
 
 <body>
-    <?php
-    function cube($num)
-    {
-        return $num * $num * $num;
-    }
+    <form action="site.php" method="post">
+        First Num: <input type="number" name="num1"><br>
+        Op: <input type="text" name="op"><br>
+        Second Num: <input type="number" name="num2"><br>
 
-    echo cube(2);
+        <input type="submit">
+    </form>
+
+    <?php
+    if (isset($_POST["num1"]) && isset($_POST["num2"]) && isset($_POST["op"])) {
+        $num1 = $_POST["num1"];
+        $num2 = $_POST["num2"];
+        $op = $_POST["op"];
+
+        if ($op == "+") {
+            echo $num1 + $num2;
+        } elseif ($op == "-") {
+            echo  $num1 - $num2;
+        } elseif ($op == "*") {
+            echo  $num1 * $num2;
+        } elseif ($op == "/") {
+            echo  $num1 / $num2;
+        } elseif ($op == "%") {
+            echo  $num1 % $num2;
+        } else {
+            echo "Choix impossible !";
+        }
+    }
 
     ?>
 </body>
