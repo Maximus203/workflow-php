@@ -10,10 +10,8 @@
 
 <body>
     <?php
-    $luckyNumbers = array(5, 2, 23, 62, 1, 3, 11);
-    for ($i = 1; $i < count($luckyNumbers); $i++) {
-        echo "$luckyNumbers[$i]<br>";
-    }
+    // This line prints out a string
+    echo "Comments are fun !";
 
     ?>
 </body>
