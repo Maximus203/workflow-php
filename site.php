@@ -10,31 +10,27 @@
 
 <body>
     <form action="site.php" method="post">
-        First Num: <input type="number" name="num1"><br>
-        Op: <input type="text" name="op"><br>
-        Second Num: <input type="number" name="num2"><br>
+        What's your grade ?<br> <input type="text" name="text">
 
         <input type="submit">
     </form>
 
     <?php
-    if (isset($_POST["num1"]) && isset($_POST["num2"]) && isset($_POST["op"])) {
-        $num1 = $_POST["num1"];
-        $num2 = $_POST["num2"];
-        $op = $_POST["op"];
 
-        if ($op == "+") {
-            echo $num1 + $num2;
-        } elseif ($op == "-") {
-            echo  $num1 - $num2;
-        } elseif ($op == "*") {
-            echo  $num1 * $num2;
-        } elseif ($op == "/") {
-            echo  $num1 / $num2;
-        } elseif ($op == "%") {
-            echo  $num1 % $num2;
+    if (isset($_POST["text"])) {
+        $text = $_POST["text"];
+        if ($text == "A") {
+            echo "You did amazing !";
+        } elseif ($text == "B") {
+            echo "You did pretty good";
+        } elseif ($text == "C") {
+            echo "You did poorly";
+        } elseif ($text == "D") {
+            echo "You did pretty good";
+        } elseif ($text == "F") {
+            echo "YOU FAIL !";
         } else {
-            echo "Choix impossible !";
+            echo "Invalid grade !";
         }
     }
 
