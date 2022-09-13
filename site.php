@@ -9,29 +9,10 @@
 </head>
 
 <body>
-    <form action="site.php" method="post">
-        What's your grade ?<br> <input type="text" name="text">
-
-        <input type="submit">
-    </form>
-
     <?php
-
-    if (isset($_POST["text"])) {
-        $text = $_POST["text"];
-        if ($text == "A") {
-            echo "You did amazing !";
-        } elseif ($text == "B") {
-            echo "You did pretty good";
-        } elseif ($text == "C") {
-            echo "You did poorly";
-        } elseif ($text == "D") {
-            echo "You did pretty good";
-        } elseif ($text == "F") {
-            echo "YOU FAIL !";
-        } else {
-            echo "Invalid grade !";
-        }
+    $luckyNumbers = array(5, 2, 23, 62, 1, 3, 11);
+    for ($i = 1; $i < count($luckyNumbers); $i++) {
+        echo "$luckyNumbers[$i]<br>";
     }
 
     ?>
