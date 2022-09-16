@@ -19,12 +19,28 @@
 
 <body>
     <?php
-    /*$title = "My First Post";
-    $author = "Mike";
-    $wordCount = 200;*/
 
-    include "useful-tools.php";
-    echo $feetInMile;
+    class Book
+    {
+        var $title;
+        var $author;
+        var $pages;
+    }
+
+    $book1 = new Book;
+    $book2 = new Book;
+
+    $book1->title = "Harry Potter";
+    $book1->author = "JK Rowling";
+    $book1->pages = 323;
+
+    $book2->title = "Lord of the rings";
+    $book2->author = "Tolkien";
+    $book2->pages = 277;
+
+    echo $book1->author;
+    echo $book2->pages;
+
     ?>
 </body>
 
