@@ -22,9 +22,9 @@
 
     class Student
     {
-        var $name;
-        var $major;
-        var $gpa;
+        private $name;
+        private $major;
+        private $gpa;
 
         function __construct($name, $major, $gpa)
         {
@@ -41,10 +41,21 @@
 
             return "false";
         }
+
+        function getGpa()
+        {
+            return $this->gpa;
+        }
+        function setGpa($gpa)
+        {
+            $this->gpa = $gpa;
+        }
     }
 
     $student1 = new Student("Jim", "Business", 3.1);
     $student2 = new Student("Pam", "Art", 2.7);
+
+    $student2->setGpa(3.4);
 
     echo $student1->hasHonors() . "<br>";
     echo $student2->hasHonors() . "<br>";
