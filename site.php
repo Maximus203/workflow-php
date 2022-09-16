@@ -20,25 +20,34 @@
 <body>
     <?php
 
-    class Book
+    class Student
     {
-        var $title;
-        var $author;
-        var $pages;
+        var $name;
+        var $major;
+        var $gpa;
 
-        function __construct($aTitle, $aAuthor, $aPages)
+        function __construct($name, $major, $gpa)
         {
-            $this->title = $aTitle;
-            $this->author = $aAuthor;
-            $this->pages = $aPages;
+            $this->name = $name;
+            $this->major = $major;
+            $this->gpa = $gpa;
+        }
+
+        function hasHonors()
+        {
+            if ($this->gpa >= 3.0) {
+                return "true";
+            }
+
+            return "false";
         }
     }
 
-    $book1 = new Book("Harry Potter", "JK Rowling", 323);
-    $book2 = new Book("Lord of the rings", "Tolkien", 277);
-    $book2->title = "Hunger Games";
+    $student1 = new Student("Jim", "Business", 3.1);
+    $student2 = new Student("Pam", "Art", 2.7);
 
-    echo $book2->title;
+    echo $student1->hasHonors() . "<br>";
+    echo $student2->hasHonors() . "<br>";
 
     ?>
 </body>
