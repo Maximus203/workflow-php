@@ -18,11 +18,14 @@
 </head>
 
 <body>
-    <?php include "header.html"; ?>
+    <?php
+    /*$title = "My First Post";
+    $author = "Mike";
+    $wordCount = 200;*/
 
-    <p class="text-center">Hello world</p>
-
-    <?php include "footer.html"; ?>
+    include "useful-tools.php";
+    echo $feetInMile;
+    ?>
 </body>
 
 </html>
